@@ -13,14 +13,14 @@ const knexConfig = {
 const db = knex(knexConfig);
 
 //check
-// router.get('/', (req, res) => {
+//router.get('/', (req, res) => {
 //     res.send('Hello World!')
 // });
 
 //check
 router.get("/", (req, res) => {
   db("home")
-    .then(home)=> {
+    .then(home=> {
       res.status(200).json(home);
     })
     .catch(err => {
